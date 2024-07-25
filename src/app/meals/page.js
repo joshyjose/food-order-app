@@ -10,14 +10,16 @@ export const metadata = {
   description: "Browse the delicious meals shared by our vibrant community.",
 };
 
-async function Meals() {
-  console.log("Fetching meals");
+// async function Meals() {
+//   console.log("Fetching meals");
+//   const meals = await getMeals();
+
+//   return <MealsGrid meals={meals} />;
+// }
+
+export default async function MealsPage() {
   const meals = await getMeals();
-
-  return <MealsGrid meals={meals} />;
-}
-
-export default function MealsPage() {
+  console.log("meals", meals);
   return (
     <>
       <header className={classes.header}>
@@ -33,11 +35,12 @@ export default function MealsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <Suspense
+        {/* <Suspense
           fallback={<p className={classes.loading}>Fetching meals...</p>}
         >
           <Meals />
-        </Suspense>
+        </Suspense> */}
+        <MealsGrid meals={meals} />
       </main>
     </>
   );
