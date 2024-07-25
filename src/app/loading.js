@@ -1,3 +1,4 @@
+import classes from "../app/loading.module.css";
 export default function MealsLoading() {
-  return <p>Feaching Meals...</p>;
+  return <p className={classes.loading}>Feaching Meals...</p>;
 }
