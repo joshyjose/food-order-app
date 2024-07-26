@@ -10,16 +10,9 @@ export const metadata = {
   description: "Browse the delicious meals shared by our vibrant community.",
 };
 
-// async function Meals() {
-//   console.log("Fetching meals");
-//   const meals = await getMeals();
-
-//   return <MealsGrid meals={meals} />;
-// }
-
 export default async function MealsPage() {
   const meals = await getMeals();
-  console.log("meals", meals);
+
   return (
     <>
       <header className={classes.header}>
